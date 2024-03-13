@@ -1,76 +1,112 @@
 li, ul, ol {list-style: none;}
 a {color: white; text-decoration: none;}
+*{ margin:0; padding:0;}
+/*---------------------------- Container ---------------------------- */
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
 
-/*---------------------------- Header ---------------------------- */
-
-.header {
-  width:80%;
+/*---------------------------- header ---------------------------- */
+.header{
+  background-color: #fff;
+  border-bottom: red;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto; 
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-
-.main{display: flex; align-items: center;}
-.logo > img {width:50px;}
-
-.search {
-  position: relative;
-  width: 400px;
-  margin-left: 20px;
-}
-.search > input {
-  width: 100%;
-  border: 1px solid #bbb;
-  border-radius: 8px;
-  padding: 10px 12px;
-  font-size: 12px;
-}
-.search img {
-  position : absolute;
-  width: 17px;
-  top: 10px;
-  right: 5px;
-  margin: 0;
-}
-
-.user {
-  display:flex;
-  justify-content: space-evenly;
   align-items: center;
 }
 
-.mypage_main {
-  margin-right: 20px;
-  padding: 10px;
-  background-color: rgb(83, 186, 226);
-  border-radius: 3px;
-  font-size: 12px;
+.logo {width:50px; height:50px; margin-left: 30px;}
+
+.search{
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.mypage_alarm {
-  padding: 10px;
-  margin-right: 20px;
-  background-color: rgb(83, 186, 226);
-  border-radius: 3px;
-  font-size: 12px;
+.search_input{
+  background-color: #eeeeee;
+  border: none;
+  color:black;
+  padding: 10px 10px;
+  border-radius: 100px;
+  width: 80%;
+  transition: all .5s;
+  margin-right: -35px;
 }
-.mypage_session {
-  padding: 10px;
-  background-color: rgb(83, 186, 226);
-  border-radius: 3px;
-  font-size: 12px;
+.search_input:focus{
+  outline: none;
+  width:100%;
+  background-color: #ececec;
 }
+.search_button{
+  background-color: eeeeee;
+  outline: none;
+  border: none;
+}
+.search_button:active{transform: translateY(2px);}
+
+
+.search_focus{outline: none;}
+.search_icon { 
+  height: 1.2rem; 
+  width: 1.2rem;
+  fill: #b1b1b1;
+}
+
+/*---------------------------- USER ICON ---------------------------- */
+
+.user{
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  position: relative;
+}
+
+.user_mypage > * {
+  padding: 10px 15px;
+  cursor: pointer;
+ 
+}
+
+.user_mypage > *:hover {
+  background-color: #eeeeee;
+}
+
+.user_name{
+  font-size: 0.8rem;
+}
+
+.user_icon{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.user_notification{
+  font-size: 12px;
+  height: 1.5em;
+  width:0.em;
+  background-color: rgb(255, 59, 59);
+  border-radius: 50%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  position: absolute;
+  top: 3px;
+  right: 80px;
+}
+
+
+
 
 /*---------------------------- Article ---------------------------- */
 
-article {
-  width:80%;
-  display: flex;
+.mid_section {
+  max-width:1200px;
+  margin: 2rem auto;
+  display:flex;
   justify-content: space-evenly;
-  margin: 0 auto; 
-  margin-top: 30px;
-  margin-bottom: 30px;
+
 }
 
 .left_menu{
@@ -101,36 +137,52 @@ article {
   justify-content: space-evenly;
 }
 
-.career_regist{
+.btn{
   text-align: center;
   width: 400px;
-  border-radius: 8px;
-  padding: 30px;
+  border-radius: 20px;
+  padding: 20px;
   background-color: rgb(83, 186, 226);
   font-weight: bold;
   color: white;
+  transition: all 0.3s;
+  position: relative
 }
 
-.career_search{
-  text-align: center;
-  width: 400px;
-  border-radius: 8px;
-  padding: 30px;
-  background-color: rgb(83, 186, 226);
-  font-weight: bold;
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.btn:active{
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+}
+
+.btn_effect {
   color: white;
 }
 
-.career_list{
-  text-align: center;
-  width: 400px;
-  border-radius: 8px;
-  padding: 30px;
-  background-color: rgb(83, 186, 226);
-  font-weight: bold;
-  color: white;
+.btn::after {
+  content: "";
+  display: inline-block;
+  height:100%;
+  width: 100%;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .5s;
+}
+.btn_effect::after {
+  background-color: rgb(109, 211, 252);
 }
 
+.btn:hover::after{
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
 
 /*---------------------------- Section ---------------------------- */
 
