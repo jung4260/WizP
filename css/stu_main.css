@@ -1,81 +1,26 @@
-li, ul, ol {list-style: none;}
-a {color: white; text-decoration: none;}
-*{ margin:0; padding:0;}
-/*---------------------------- Container ---------------------------- */
-.container{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-/*---------------------------- header ---------------------------- */
-.header{
-  background-color: #fff;
-  border-bottom: red;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {width:50px; height:50px; margin-left: 30px;}
-
-.search{
-  flex: 0 0 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.search_input{
-  background-color: #eeeeee;
-  border: none;
-  color:black;
-  padding: 10px 10px;
-  border-radius: 100px;
-  width: 80%;
-  transition: all .5s;
-  margin-right: -35px;
-}
-.search_input:focus{
-  outline: none;
-  width:100%;
-  background-color: #ececec;
-}
-.search_button{
-  background-color: eeeeee;
-  outline: none;
-  border: none;
-}
-.search_button:active{transform: translateY(2px);}
-
-
-.search_focus{outline: none;}
-.search_icon { 
-  height: 1.2rem; 
-  width: 1.2rem;
-  fill: #b1b1b1;
-}
+html, body{margin: 0;padding: 0;font-family: "Gothic A1", sans-serif;}
+ul, ol, li{list-style: none;}
+button, a{cursor: pointer;}
+button, a, li{color: black;}
+a:link, a:hover, a:focus, a:visited{text-decoration: none;}
+span, a, p, button{font-family: "Gothic A1", sans-serif; font-weight: 400; font-style: normal;}
 
 /*---------------------------- USER ICON ---------------------------- */
 
 .user{
   display: flex;
   align-items: center;
-  align-self: stretch;
   position: relative;
 }
 
 .user_mypage > * {
   padding: 10px 15px;
   cursor: pointer;
- 
-}
-
-.user_mypage > *:hover {
-  background-color: #eeeeee;
 }
 
 .user_name{
   font-size: 0.8rem;
+  color:black;
 }
 
 .user_icon{
@@ -84,18 +29,24 @@ a {color: white; text-decoration: none;}
 }
 .user_notification{
   font-size: 12px;
-  height: 1.5em;
-  width:0.em;
-  background-color: rgb(255, 59, 59);
+  font-weight: bolder;
+  color: rgb(255, 0, 0);
   border-radius: 50%;
-  display: flex;
-  justify-self: center;
-  align-items: center;
   position: absolute;
-  top: 3px;
-  right: 80px;
+  top: -23px;
+  right: 99px;
+  animation-name: floating;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 10px;
 }
-
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }    
+}
 
 
 
@@ -118,9 +69,10 @@ a {color: white; text-decoration: none;}
 .menu_top{
   border-radius: 8px;
   padding: 10px 20px;
-  background-color: rgb(83, 186, 226);
+  background-color: rgb(49, 100, 241);
   font-weight: bold;
   color: white;
+  text-align: center;
 }
 
 .menu_bottom {
@@ -142,7 +94,7 @@ a {color: white; text-decoration: none;}
   width: 400px;
   border-radius: 20px;
   padding: 20px;
-  background-color: rgb(83, 186, 226);
+  background-color: rgb(49, 100, 241);
   font-weight: bold;
   color: white;
   transition: all 0.3s;
@@ -159,30 +111,6 @@ a {color: white; text-decoration: none;}
 
 }
 
-.btn_effect {
-  color: white;
-}
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height:100%;
-  width: 100%;
-  border-radius: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .5s;
-}
-.btn_effect::after {
-  background-color: rgb(109, 211, 252);
-}
-
-.btn:hover::after{
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
 
 /*---------------------------- Section ---------------------------- */
 
@@ -208,6 +136,8 @@ a {color: white; text-decoration: none;}
   margin-top: 20px;
   font-size: 15px;
 }
+
+
 
 
 
