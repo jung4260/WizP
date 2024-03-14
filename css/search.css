@@ -1,14 +1,9 @@
 
-.container {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin-left: 720px;
+/*---------------------------- header ---------------------------- */
+.container{
   margin-top: 30px;
-  margin-bottom: 30px;
 }
 
-/*---------------------------- header ---------------------------- */
 .search_wrapper{
   background-color: #fff;
   border-bottom: red;
@@ -20,21 +15,22 @@
 .search{
   flex: 0 0 40%;
   display: flex;
-  justify-content:;
+  justify-content:center;
+  margin-bottom: 30px;
 }
 .search_input{
   background-color: #eeeeee;
   border: none;
   color:black;
-  padding: 10px 10px;
+  padding: 12px 10px;
   border-radius: 100px;
-  width: 80%;
+  width: 20%;
   transition: all .5s;
   margin-right: -35px;
 }
 .search_input:focus{
   outline: none;
-  width:100%;
+  width: 40%;
   background-color: #ececec;
 }
 .search_button{
